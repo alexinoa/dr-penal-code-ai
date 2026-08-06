@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.2.0 — Consolidated Custom GPT Knowledge Pack
+
+Updated the project for the Custom GPT 20-file Knowledge limit.
+
+Changed:
+- Added `custom-gpt/knowledge-guidelines.md` as the consolidated legal reasoning and reliability layer.
+- Added `custom-gpt/master-reference-index.md` as the consolidated retrieval, special-law, bilingual terminology, and cross-reference layer.
+- Updated `custom-gpt/upload-guide.md` so the production GPT uses only the two consolidated project files in Knowledge.
+- Updated `README.md` with the current 17-of-20 recommended Knowledge allocation.
+- Kept detailed files in `knowledge-guides/`, `indexes/`, `templates/`, and `tests/` as development/source material rather than separate production uploads.
+- Reserved three Knowledge slots for future high-value official sources.
+
+### Current production files
+
+Instructions field:
+- `custom-gpt/instructions/custom-gpt-instructions.md`
+
+Project-generated Knowledge files:
+- `custom-gpt/knowledge-guidelines.md`
+- `custom-gpt/master-reference-index.md`
+
+Administrative setup guide:
+- `custom-gpt/upload-guide.md`
+
 ## 0.1.0 — Foundation
 
 Initial Custom GPT reasoning layer.
