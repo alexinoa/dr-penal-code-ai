@@ -1,4 +1,6 @@
-# Custom GPT Upload Guide
+# Custom GPT Upload Guide — 20 File Limit Strategy
+
+The Custom GPT Knowledge limit is 20 files. Do not upload every project guide, index, template, and test file separately. The GitHub repository may contain many files for maintenance, but the Custom GPT should receive a compact release set.
 
 ## 1. Instructions field
 
@@ -6,84 +8,106 @@ Paste the full contents of:
 
 `custom-gpt/instructions/custom-gpt-instructions.md`
 
-Keep this field concise. Behavioral rules belong here; legal substance belongs in Knowledge.
+This does not consume a Knowledge file slot.
 
-## 2. Knowledge files — mandatory core law
+## 2. Mandatory reasoning files — 2 slots total
 
-Upload the current versions of:
+Upload only these two project-generated Knowledge files:
 
-- Constitution of the Dominican Republic.
-- Ley 74-25 — Código Penal.
-- Ley 44-26 — amendments to Ley 74-25.
-- Ley 97-25 — Código Procesal Penal.
-- Prior Penal Code for historical/transitional analysis.
+1. `custom-gpt/knowledge-guidelines.md`
+2. `custom-gpt/master-reference-index.md`
 
-## 3. Knowledge files — special laws
+Do NOT separately upload the files in `knowledge-guides/`, `indexes/`, `templates/`, or `tests/`. They remain in GitHub for maintenance, development, and future generation of the consolidated files.
 
-Upload current official texts for the special laws you maintain, including at minimum:
+## 3. Core legal authorities — 5 slots
 
-- Ley 53-07 — Crímenes y Delitos de Alta Tecnología.
-- Ley 155-17 — Lavado de Activos y Financiamiento del Terrorismo.
-- Ley 631-16 — Armas, Municiones y Materiales Relacionados.
-- Ley 50-88 — Drogas y Sustancias Controladas.
-- Ley 136-03 — Niños, Niñas y Adolescentes.
-- Ley 137-03 — Tráfico Ilícito de Migrantes y Trata de Personas.
-- Ley 133-11 — Ministerio Público.
-- Ley 590-16 — Policía Nacional.
-- Ley 285-04 — Migración.
-- Ley 311-14 — Declaración Jurada de Patrimonio.
+Upload current versions of:
 
-Add official regulations, later amendments, and replacement statutes when enacted.
+1. Constitution of the Dominican Republic.
+2. Ley 74-25 — Código Penal.
+3. Ley 44-26 — amendments to Ley 74-25.
+4. Ley 97-25 — Código Procesal Penal.
+5. Prior Penal Code for historical/transitional analysis.
 
-## 4. Knowledge files — reasoning layer
+Running total: 7 files.
 
-Upload these project files after the statutes:
+## 4. Priority special laws — 10 slots
 
-- `knowledge-guides/02-legal-reasoning-engine.md`
-- `knowledge-guides/03-research-methodology.md`
-- `knowledge-guides/04-source-hierarchy.md`
-- `knowledge-guides/05-citation-standards.md`
-- `knowledge-guides/06-output-formats.md`
-- `knowledge-guides/07-criminal-offense-framework.md`
-- `knowledge-guides/08-procedural-framework.md`
-- `knowledge-guides/09-jurisprudence-framework.md`
-- `knowledge-guides/10-hallucination-prevention.md`
-- `knowledge-guides/11-professional-standards.md`
-- `knowledge-guides/12-quality-assurance-checklist.md`
+Upload:
 
-These files guide retrieval and analysis but never override controlling law.
+6. Ley 53-07 — Crímenes y Delitos de Alta Tecnología.
+7. Ley 155-17 — Lavado de Activos y Financiamiento del Terrorismo.
+8. Ley 631-16 — Armas, Municiones y Materiales Relacionados.
+9. Ley 50-88 — Drogas y Sustancias Controladas.
+10. Ley 136-03 — Niños, Niñas y Adolescentes.
+11. Ley 137-03 — Tráfico Ilícito de Migrantes y Trata de Personas.
+12. Ley 133-11 — Ministerio Público.
+13. Ley 590-16 — Policía Nacional.
+14. Ley 285-04 — Migración.
+15. Ley 311-14 — Declaración Jurada de Patrimonio.
 
-## 5. Indexes and templates
+With the 2 project-generated files and 5 core authorities, this produces a total of 17 Knowledge files.
 
-Upload the following when populated:
+## 5. Reserve the remaining 3 slots
 
-- `indexes/bilingual-legal-glossary.md`
-- `indexes/crime-cross-reference-index.md`
-- `indexes/constitutional-rights-index.md`
-- `indexes/penalty-matrix.md`
-- `indexes/special-laws-index.md`
-- selected files from `templates/`
+Keep 3 slots free for the most valuable current additions, such as:
 
-## 6. Conversation starters
+- a controlling regulation directly relevant to frequent consultations;
+- an official consolidated amendment;
+- a high-value official jurisprudence compilation;
+- another special criminal statute that proves necessary in testing.
 
-Copy the starters from `custom-gpt/conversation-starters.md` into the GPT builder.
+Do not fill the last three slots merely because space exists. Reserve them for real coverage gaps.
 
-## 7. Recommended capabilities
+## 6. Files that should NOT be uploaded separately
 
-Enable web access only if you want the GPT to verify later amendments, new official publications, or current jurisprudence. The GPT should still prefer uploaded official sources for the legal text already present in Knowledge.
+Do not upload these separately to the GPT Knowledge section:
 
-## 8. Update procedure
+- `knowledge-guides/*`
+- `indexes/*`
+- `templates/*`
+- `tests/*`
+- `README.md`
+- `CHANGELOG.md`
+- `CONTRIBUTING.md`
+- `custom-gpt/upload-guide.md`
+- `custom-gpt/conversation-starters.md`
+
+They are development and maintenance files. Their useful behavioral content is consolidated into the two required project-generated Knowledge files.
+
+## 7. Optional future legal consolidation
+
+If the legal-source count later exceeds 18 statutory files, consolidate only when legally safe. Prefer grouping documents by a clear category while preserving each law's complete title and article numbering, for example:
+
+- `Special_Laws_Public_Authorities.md` containing Ley 133-11 + Ley 590-16.
+- `Special_Laws_Migration_Trafficking.md` containing Ley 285-04 + Ley 137-03.
+
+Do not merge unrelated controlling laws merely to save slots. Never edit, summarize, renumber, or intermix statutory text. Each law inside a merged file must have a prominent delimiter, full title, law number, publication information, and complete text.
+
+## 8. Conversation starters
+
+Copy starters from:
+
+`custom-gpt/conversation-starters.md`
+
+Conversation starters do not consume Knowledge slots.
+
+## 9. Recommended capabilities
+
+Enable web access if you want the GPT to verify later amendments, new official publications, or current jurisprudence. Uploaded official law remains the preferred source for text already present in Knowledge.
+
+## 10. Update procedure
 
 When the repository changes:
 
-1. Pull the latest version locally.
+1. `git pull origin main` locally.
 2. Review `CHANGELOG.md`.
-3. Replace modified reasoning/index files in Custom GPT Knowledge.
-4. Replace any statute that has been amended or superseded.
-5. Re-paste the Instructions file only if that file changed.
-6. Run the tests in `tests/test-scenarios.md`.
-7. Do not publish changes until the acceptance checklist passes.
+3. If `custom-gpt-instructions.md` changed, re-paste it into Instructions.
+4. Replace `knowledge-guidelines.md` and/or `master-reference-index.md` if modified.
+5. Replace any statute that was amended or superseded.
+6. Keep the total Knowledge count at 20 or less.
+7. Run `tests/test-scenarios.md` locally as your validation checklist.
 
-## 9. Important limitation
+## 11. Important limitation
 
-Custom GPT Knowledge does not automatically synchronize with GitHub. Updating this repository does not update the GPT. Files must be manually re-uploaded or replaced in the GPT builder.
+GitHub does not automatically synchronize with Custom GPT Knowledge. Repository updates must be manually uploaded/replaced in the GPT Builder.
