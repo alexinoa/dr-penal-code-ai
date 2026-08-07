@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.3.0 — Legal Reasoning and Quality Upgrade
+
+Strengthened the production Custom GPT without increasing the 17-file Knowledge footprint.
+
+Changed:
+- Expanded `custom-gpt/knowledge-guidelines.md` into the consolidated legal reasoning, constitutional/procedural review, conflict-resolution, legal-writing, hallucination-prevention, and response-quality engine.
+- Added an explicit exhaustive-source-review workflow so the GPT does not stop at the first relevant article when another authority may modify, supplement, limit, or displace it.
+- Added a formal conflict-resolution method for overlapping or inconsistent authorities.
+- Added a professional legal-writing standard and structured response-quality standard.
+- Strengthened `custom-gpt/instructions/custom-gpt-instructions.md` with exhaustive source review, conflict handling, and clearer separation of substantive criminal law, procedure, constitutional protections, and special legislation.
+- Updated `custom-gpt/upload-guide.md` with the v0.3.0 migration procedure.
+- Kept the production Knowledge allocation at 17 files; no additional Knowledge slot is required.
+
+### v0.3.0 Custom GPT migration
+
+Replace:
+- GPT Instructions field with the latest `custom-gpt/instructions/custom-gpt-instructions.md`.
+- Existing `knowledge-guidelines.md` Knowledge file with the latest `custom-gpt/knowledge-guidelines.md`.
+
+Keep:
+- `custom-gpt/master-reference-index.md` unless a later commit modifies it.
+- Existing official statutes unless they have separately been amended or superseded.
+
 ## 0.2.0 — Consolidated Custom GPT Knowledge Pack
 
 Updated the project for the Custom GPT 20-file Knowledge limit.
