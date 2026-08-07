@@ -40,7 +40,7 @@ Paste the contents of:
 
 Upload the official legal corpus plus these two consolidated project files:
 
-- `custom-gpt/knowledge-guidelines.md`
+- `custom-gpt/DR-Criminal-Law-AI-Index.md`
 - `custom-gpt/master-reference-index.md`
 
 Do **not** separately upload the files in `knowledge-guides/`, `indexes/`, `templates/`, or `tests/` unless a future release explicitly instructs otherwise. They remain in GitHub as maintainable source material for the consolidated production files.
@@ -66,7 +66,7 @@ The recommended base configuration uses 17 of 20 slots:
 13. Ley 590-16 — Policía Nacional.
 14. Ley 285-04 — Migración.
 15. Ley 311-14 — Declaración Jurada de Patrimonio.
-16. `custom-gpt/knowledge-guidelines.md`.
+16. `custom-gpt/DR-Criminal-Law-AI-Index.md`.
 17. `custom-gpt/master-reference-index.md`.
 
 This leaves three Knowledge slots available for high-value future additions such as important regulations, verified jurisprudence compilations, or another controlling special statute.
