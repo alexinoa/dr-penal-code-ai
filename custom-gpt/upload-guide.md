@@ -14,10 +14,10 @@ This does not consume a Knowledge file slot. Replace the prior Instructions text
 
 Upload only:
 
-1. `custom-gpt/knowledge-guidelines.md`
+1. `custom-gpt/DR-Criminal-Law-AI-Index.md`
 2. `custom-gpt/master-reference-index.md`
 
-The first is the consolidated legal reasoning, writing, conflict-resolution, hallucination-prevention, and response-quality engine. The second is the consolidated retrieval and cross-reference index.
+`DR-Criminal-Law-AI-Index.md` is the consolidated legal reasoning, writing, conflict-resolution, hallucination-prevention, and response-quality engine. `master-reference-index.md` is the consolidated retrieval and cross-reference index.
 
 Do NOT separately upload files from `knowledge-guides/`, `indexes/`, `templates/`, or `tests/`.
 
@@ -100,18 +100,19 @@ When the repository changes:
 1. Run `git pull origin main` locally.
 2. Review `CHANGELOG.md`.
 3. If `custom-gpt-instructions.md` changed, replace the GPT Instructions field with its complete contents.
-4. If `knowledge-guidelines.md` changed, remove/replace that Knowledge file with the latest version.
+4. If `DR-Criminal-Law-AI-Index.md` changed, remove/replace that Knowledge file with the latest version.
 5. If `master-reference-index.md` changed, remove/replace it with the latest version.
 6. Replace any statute that has been amended or superseded.
 7. Keep total Knowledge count at 20 or less.
 8. Run the scenarios in `tests/test-scenarios.md` and review `tests/acceptance-checklist.md` before publishing.
 
-## 11. Migration to v0.3.0
+## 11. Migration to current production layout
 
-For the v0.3.0 reasoning upgrade:
+For the current reasoning upgrade:
 - Replace the GPT Instructions field using the latest `custom-gpt/instructions/custom-gpt-instructions.md`.
-- Replace the existing `knowledge-guidelines.md` Knowledge upload with the latest version.
-- `master-reference-index.md` remains valid unless its GitHub modification date changes.
+- Remove any older `knowledge-guidelines.md` Knowledge upload if it is still present.
+- Upload/replace `custom-gpt/DR-Criminal-Law-AI-Index.md`.
+- Keep `master-reference-index.md` unless a later commit modifies it.
 - No statute needs to be re-uploaded solely because of this reasoning-engine update.
 - Your Knowledge file count should remain 17.
 
